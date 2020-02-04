@@ -6,11 +6,10 @@ import pandas as pd
 
 #What is the 10 001st prime number?
 
-z = 1
-prime = [2]
-while len(prime) < 10001:
-    z += 1
-    if all(z % i == 0 for i in range(2, z)):
-        prime.append(z)
-
-prime[10000]
+z = 3
+primes = [2]
+while len(primes) < 10001:
+    if all(z % i == 0 for i in primes):
+        primes.append(z)
+    z += 2 #since we are starting with 3 and 2 is the only even prime    
+primes[10000]
